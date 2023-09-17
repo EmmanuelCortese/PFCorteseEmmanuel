@@ -1,0 +1,209 @@
+@import 'typefaces';
+
+.icono {
+    width: 130px;
+}
+
+.navcolor {
+    background-color: #d2f4e4;
+    font-family: 'Alfa Slab One';
+    font-size: 30px;
+    ul li {
+        margin-right: 100px;
+        margin-left: 20px;
+    }
+}
+
+.navposition {
+    margin-top: 15px;
+}
+
+.colordrop {
+    background-color: #d2f4e4;
+}
+
+body {
+    background-color: rgb(255, 231, 175);
+}
+
+.mangas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.titulos {
+    font-family: 'Didact Gothic';
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.sinopsistitle {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: -30px;
+}
+
+.tarjetas {
+    width: 18rem;
+}
+
+.mangaportadas{
+    width: auto;
+    height: 450px;
+}
+
+.footicon {
+    width: 40px;
+    margin-left: 5px;
+}
+
+.buttoncolors {
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:linear-gradient(to bottom, #d2f4e4 5%, #32d686 100%);
+	background-color:#d2f4e4;
+	border-radius:6px;
+	border:1px solid #9bd1b7;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Didact Gothic';
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #054a29;
+    &:hover {
+        background:linear-gradient(to bottom, #32d686 5%, #d2f4e4 100%);
+        background-color:#32d686;
+    }
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+
+.logo-navbar{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Didact Gothic';
+    text-align: center;
+    background-color: #d2f4e4;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+#padre-flex-2 {
+    font-family: 'Didact Gothic';
+    margin-top: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    'video-1 sinopsis-1 sinopsis-1'
+    'sinopsis-2 sinopsis-2 video-2'
+    'video-3 sinopsis-3 sinopsis-3'
+    'sinopsis-4 sinopsis-4  video-4'
+    'video-5 sinopsis-5 sinopsis-5'
+    ;
+    grid-template-columns: 560px 920px 560px;
+    .video-1 {
+        grid-area: video-1;
+        width:560px; 
+        height: 315px;
+        border-radius: 10px; border: 5px solid #d2f4e4; 
+        margin-bottom: 15px;
+    }
+    
+    .sinopsis-1 {
+        background-color: #ffffff;
+        border-radius: 10px; border: 5px solid #d2f4e4;
+        margin-left: 10px;
+        margin-right: 10px;
+        grid-area: sinopsis-1;
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+    }
+    
+    .video-2 {
+        grid-area: video-2;
+        @extend .video-1
+    }
+    
+    .sinopsis-2 {
+        padding-top: 90px;
+        grid-area: sinopsis-2;
+        @extend .sinopsis-1
+    }
+    
+    .video-3 {
+        grid-area: video-3;
+        @extend .video-1 
+    }
+    
+    .sinopsis-3 {
+        padding-top: 100px;
+        grid-area: sinopsis-3;
+        @extend .sinopsis-1
+    }
+    
+    .video-4 {
+        grid-area: video-4;
+        @extend .video-1
+    }
+    
+    .sinopsis-4 {
+        padding-top: 80px;
+        grid-area: sinopsis-4;
+        @extend .sinopsis-1
+    }
+    
+    .video-5 {
+        grid-area: video-5;
+        @extend .video-1 
+    }
+    
+    .sinopsis-5 {
+        padding-top: 90px;
+        grid-area: sinopsis-5;
+        @extend .sinopsis-1
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1700px) {
+    .mangas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .tarjetas {
+        margin-bottom: 30px;
+    }
+
+    #padre-flex-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .sinopsistitle {
+        margin-top: -90px;
+    }
+}
