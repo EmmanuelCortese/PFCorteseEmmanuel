@@ -91,6 +91,18 @@ body {
     margin-top: 50px;
 }
 
+.sobrecatino {
+    border-radius: 10px; border: 5px solid #d2f4e4;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: -100px;
+    margin-bottom: 250px;
+}
+
+.catinos {
+    margin-top: -100px;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -182,6 +194,7 @@ body {
         grid-area: sinopsis-5;
         @extend .sinopsis-1
     }
+
 }
 
 @media screen and (min-width: 280px) and (max-width: 1700px) {
@@ -206,4 +219,5 @@ body {
     .sinopsistitle {
         margin-top: -90px;
     }
+
 }

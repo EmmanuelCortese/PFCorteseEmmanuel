@@ -97,6 +97,19 @@ body {
   margin-top: 50px;
 }
 
+.sobrecatino {
+  border-radius: 10px;
+  border: 5px solid #d2f4e4;
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: -100px;
+  margin-bottom: 250px;
+}
+
+.catinos {
+  margin-top: -100px;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
