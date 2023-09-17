@@ -85,22 +85,29 @@ body {
     }
 }
 
-.logo-navbar{
+.logo-navbar {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.logo-navbar-2 {
+    display: flex;
+    justify-content: center;;
 }
 
 .sobrecatino {
     border-radius: 10px; border: 5px solid #d2f4e4;
     background-color: #ffffff;
     width: 100%;
-    margin-top: -100px;
+    margin-top: 10px;
     margin-bottom: 250px;
+    font-family: 'Didact Gothic';
 }
 
 .catinos {
-    margin-top: -100px;
+    margin-bottom: 30px;
+    width: 150px;
 }
 
 .formulario {
@@ -218,6 +225,12 @@ body {
 
     .sinopsistitle {
         margin-top: -90px;
+    }
+
+    .logo-navbar-2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
     }
 
 }
