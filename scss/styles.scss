@@ -55,6 +55,10 @@ body {
     height: 450px;
 }
 
+.card-text {
+    font-family: 'Didact Gothic';
+}
+
 .footicon {
     width: 40px;
     margin-left: 5px;
@@ -204,7 +208,45 @@ body {
 
 }
 
-@media screen and (min-width: 280px) and (max-width: 1700px) {
+.directorio {
+    font-family: 'Didact Gothic';
+    margin: 0;
+    padding: 20px;
+    h1 {
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    li {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+}
+
+.cover {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 1280px) {
+    
     .mangas {
         display: flex;
         flex-direction: column;
@@ -221,6 +263,10 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        .video-1 {
+            width: 450px;
+            height: 250px;
+        }
     }
 
     .sinopsistitle {
