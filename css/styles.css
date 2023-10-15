@@ -13,11 +13,24 @@
 .navcolor {
   background-color: #d2f4e4;
   font-family: "Alfa Slab One";
-  font-size: 30px;
+  font-size: 25px;
 }
-.navcolor ul li {
-  margin-right: 100px;
-  margin-left: 20px;
+.navcolor a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: rgb(255, 231, 175);
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background-color: #d2f4e4;
 }
 
 .navposition {
@@ -28,41 +41,32 @@
   background-color: #d2f4e4;
 }
 
+.navbar-toggler-icon {
+  background-image: url(../Imagenes/Redes/descargar.svg);
+}
+
 body {
   background-color: rgb(255, 231, 175);
 }
 
-.mangas {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 .titulos {
   font-family: "Didact Gothic";
-  font-size: 35px;
+  font-size: 45px;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.inicio-tarjetas {
+  font-family: "Alfa Slab One";
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .sinopsistitle {
   font-size: 30px;
   margin-bottom: 15px;
   margin-top: -30px;
-}
-
-.tarjetas {
-  width: 18rem;
-}
-
-.mangaportadas {
-  width: auto;
-  height: 450px;
-}
-
-.card-text {
-  font-family: "Didact Gothic";
 }
 
 .footicon {
@@ -135,62 +139,37 @@ body {
   margin-top: 15px;
 }
 
-#padre-flex-2 {
-  font-family: "Didact Gothic";
-  margin-top: 15px;
-  padding: 15px;
+.grid-container {
   display: grid;
-  grid-template-areas: "video-1 sinopsis-1 sinopsis-1" "sinopsis-2 sinopsis-2 video-2" "video-3 sinopsis-3 sinopsis-3" "sinopsis-4 sinopsis-4  video-4" "video-5 sinopsis-5 sinopsis-5";
-  grid-template-columns: 560px 920px 560px;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
 }
-#padre-flex-2 .video-1, #padre-flex-2 .video-5, #padre-flex-2 .video-4, #padre-flex-2 .video-3, #padre-flex-2 .video-2 {
-  grid-area: video-1;
-  width: 560px;
-  height: 315px;
-  border-radius: 10px;
-  border: 5px solid #d2f4e4;
-  margin-bottom: 15px;
-}
-#padre-flex-2 .sinopsis-1, #padre-flex-2 .sinopsis-5, #padre-flex-2 .sinopsis-4, #padre-flex-2 .sinopsis-3, #padre-flex-2 .sinopsis-2 {
+
+.grid-item {
+  display: flex;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
   border: 5px solid #d2f4e4;
-  margin-left: 10px;
-  margin-right: 10px;
-  grid-area: sinopsis-1;
+  font-family: "Didact Gothic";
   font-size: 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
 }
-#padre-flex-2 .video-2 {
-  grid-area: video-2;
+
+.video-container {
+  flex: 1;
+  max-width: 560px;
 }
-#padre-flex-2 .sinopsis-2 {
-  padding-top: 90px;
-  grid-area: sinopsis-2;
+.video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
 }
-#padre-flex-2 .video-3 {
-  grid-area: video-3;
-}
-#padre-flex-2 .sinopsis-3 {
-  padding-top: 100px;
-  grid-area: sinopsis-3;
-}
-#padre-flex-2 .video-4 {
-  grid-area: video-4;
-}
-#padre-flex-2 .sinopsis-4 {
-  padding-top: 80px;
-  grid-area: sinopsis-4;
-}
-#padre-flex-2 .video-5 {
-  grid-area: video-5;
-}
-#padre-flex-2 .sinopsis-5 {
-  padding-top: 90px;
-  grid-area: sinopsis-5;
+
+.video-info {
+  flex: 1;
+  padding: 10px;
 }
 
 .directorio {
@@ -227,33 +206,12 @@ body {
   height: auto;
 }
 
-@media screen and (min-width: 280px) and (max-width: 1280px) {
-  .mangas {
-    display: flex;
+@media (max-width: 768px) {
+  .grid-item {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
   }
-  .tarjetas {
-    margin-bottom: 30px;
-  }
-  #padre-flex-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  #padre-flex-2 .video-1, #padre-flex-2 .video-2, #padre-flex-2 .video-3, #padre-flex-2 .video-4, #padre-flex-2 .video-5 {
-    width: 450px;
-    height: 250px;
-  }
-  .sinopsistitle {
-    margin-top: -90px;
-  }
-  .logo-navbar-2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  .video-container {
+    max-width: none;
   }
 }
 
